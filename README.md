@@ -7,7 +7,7 @@ After that, open your project and do a `npm init` or `yarn init` to start you pa
 
 ## NodeJS libraries
 
-NodeJS is a back-end Javascript, one of the most used languages in the ***Omnistack***.
+NodeJS is a back-end Javascript, one of the most used languages in the ***[Omnistack](https://medium.com/@cesar.will.hilario/omnistack-um-desenvolvedor-javascript-omnipresente-por-c%C3%A9sar-hil%C3%A1rio-3ce29d280bf8)***.
 
 ### nodemon
 
