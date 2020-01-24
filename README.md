@@ -46,7 +46,9 @@ async getInformation(request,response) {
 	...
 }
 ```
-### Express
+
+For more details, visit the official [axios documentation](https://github.com/axios/axios).
+### express
 
 There are a lot of functionalities in **express**, but the most used (and the one I will show here) is the routing one. 
 You can easily open a localhost server for testing your app using this module.
@@ -71,4 +73,6 @@ app.listen(3000, () => {
 	console.log('Listening on port 3000.')
 	})
 ```
+For more details, visit the official [express documentation](https://expressjs.com/pt-br/starter/installing.html).
+
 
