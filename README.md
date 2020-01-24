@@ -123,4 +123,3 @@ module.exports = (server) => {
 }
 ```
 For more details, visit the official [node-restful documentation](https://github.com/baugarten/node-restful).
-https://github.com/baugarten/node-restful
