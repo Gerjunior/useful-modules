@@ -175,6 +175,7 @@ NestJs is a progressive Node.js framework for building efficient and scalable se
 **Usage**
 create the project
 > nest new FreshStart
+> cd FreshStart && npm run start
 
 Main.ts
 ```
