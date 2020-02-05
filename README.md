@@ -17,6 +17,10 @@ Nodemon is used to turn our lives as developers easier, restarting the *.js* fil
 ***Global*** :`npm install -g nodemon`
 ***Local***: `npm install --save-dev nodemon`
 
+**Or you can use Yarn**
+***Global*** : `yarn add global nodemon`
+***Local*** : `yarn add nodemon`
+
 After doing that, you can start the project using the command `nodemon <./filePath.js>` and everytime you save the file nodemon will take care of the execution.
 
 For more details, visit the official [nodemon documentation](https://www.npmjs.com/package/nodemon).
@@ -26,6 +30,8 @@ Bored of used pure AJAX for assyncronously requests? Now you don't need it, so p
 
 **Installation**
 `npm install axios`
+**Or you can use Yarn**
+***Local*** : `yarn add global axios`
 
 **Usage**
 >Using GitHub api
@@ -55,6 +61,37 @@ You can easily open a localhost server for testing your app using this module.
 
 **Installation**
 `npm install express`
+**Or you can use Yarn**
+***Local*** : `yarn add express`
+
+**Start a fresh project**
+You can use **express-generator** to start a new express project from an existing template.
+**install** using `npm install express-generator -g` or if you want to use Yarn `yarn add global express-generator`
+```
+Starting a new Project.
+
+Usage: express [options][dir]
+  Options:
+    -h, --help          output usage information
+        --version       output the version number
+    -e, --ejs           add ejs engine support
+        --hbs           add handlebars engine support
+        --pug           add pug engine support
+    -H, --hogan         add hogan.js engine support
+        --no-view       generate without view engine
+    -v, --view <engine> add view <engine> support (ejs|hbs|hjs|jade|pug|twig|vash) (defaults to jade)
+    -c, --css <engine>  add stylesheet <engine> support (less|stylus|compass|sass) (defaults to plain css)
+        --git           add .gitignore
+    -f, --force         force on non-empty directory
+
+in this example we will use an app named [ FreshStart ]
+
+Creation: express --view=pug FreshStart
+   Debug: 
+     cd FreshStart
+     npm install or yarn add
+     set DEBUG=myapp:* & npm start [Note: If you used yarn to install packages start with yarn start]
+```
 
 **Usage**
 ```
@@ -81,6 +118,8 @@ node-restful module is used for automatizing http routes. With it in your projec
 
 **Instalation**
 `npm install node-restful`
+**Or you can use Yarn**
+***Local*** : `yarn add express`
 
 **Usage**
 On TODO model file 
@@ -123,3 +162,32 @@ module.exports = (server) => {
 }
 ```
 For more details, visit the official [node-restful documentation](https://github.com/baugarten/node-restful).
+
+### Nest Js
+
+NestJs is a progressive Node.js framework for building efficient and scalable server-side applications.
+
+**Instalation**
+`npm i -g @nestjs/cli`
+**Or you can use Yarn**
+***Local*** : `yarn add global @nestjs/cli`
+
+**Usage**
+create the project
+> nest new FreshStart
+> cd FreshStart && npm run start
+
+Main.ts
+```
+import { NestFactory } from '@nestjs/core';
+import { AppModule } from './app.module';
+
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+  await app.listen(3000);
+}
+bootstrap();
+```
+For more details, visit the official [NestJs documentation](https://docs.nestjs.com/first-steps).
+
+
