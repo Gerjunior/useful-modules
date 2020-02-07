@@ -1,40 +1,43 @@
 
 # useful-modules
-This is intented to be a quick guide to the most used and useful modules for building applications in NodeJS, ReactJS and other future frameworks that I will use for front-end development.
-Before starting, be sure to have **NodeJS** and **npm** installed on your local machine. You can also use **yarn** for package managing.
-After that, open your project and do a `npm init` or `yarn init` to start you package manager.
-*PS : On this first template, I will only write commands using **npm** to facilitate.* 
 
-## NodeJS libraries
+This is intented to be a quick guide to the most used and useful modules for building applications in NodeJS, ReactJS and other future frameworks that I will use for front-end development. Before starting, be sure to have  **NodeJS**  or **npm**  installed on your local machine. After that, open your project and do a  `npm init`  or  `yarn init`  to start you package manager. 
 
-NodeJS is a back-end Javascript, one of the most used languages in the ***[Omnistack](https://medium.com/@cesar.will.hilario/omnistack-um-desenvolvedor-javascript-omnipresente-por-c%C3%A9sar-hil%C3%A1rio-3ce29d280bf8)***.
+## [](https://github.com/Gerjunior/useful-modules#nodejs-libraries)NodeJS libraries
 
-### nodemon
+NodeJS is a back-end Javascript, one of the most used languages in the  _**[Omnistack](https://medium.com/@cesar.will.hilario/omnistack-um-desenvolvedor-javascript-omnipresente-por-c%C3%A9sar-hil%C3%A1rio-3ce29d280bf8)**_.
 
-Nodemon is used to turn our lives as developers easier, restarting the *.js* file automatically before saving.
+### [](https://github.com/Gerjunior/useful-modules#nodemon)nodemon
 
-**Installation**
-***Global*** :`npm install -g nodemon`
-***Local***: `npm install --save-dev nodemon`
+Nodemon is used to turn our lives as developers easier, restarting the  _.js_  file automatically before saving.
 
-**Or you can use Yarn**
-***Global*** : `yarn add global nodemon`
-***Local*** : `yarn add nodemon`
+**Installation** 
 
-After doing that, you can start the project using the command `nodemon <./filePath.js>` and everytime you save the file nodemon will take care of the execution.
+**npm**
+ _**Global**_  `npm install -g nodemon` 
+  _**Local**_ `npm install --save-dev nodemon`
 
-For more details, visit the official [nodemon documentation](https://www.npmjs.com/package/nodemon).
+**Yarn**
+  _**Global**_   `yarn add global nodemon`
+    _**Local**_   `yarn add nodemon`
 
-### axios
-Bored of used pure AJAX for assyncronously requests? Now you don't need it, so please say R.I.P to jQuery and stop using it! 
+After doing that, you can start the project using the command  `nodemon <./filePath.js>`  and everytime you save the file nodemon will take care of the execution.
 
-**Installation**
-`npm install axios`
-**Or you can use Yarn**
-***Local*** : `yarn add global axios`
+For more details, visit the official  [nodemon documentation](https://www.npmjs.com/package/nodemon).
+
+### [](https://github.com/Gerjunior/useful-modules#axios)axios
+
+Bored of used pure AJAX for assyncronously requests? Now you don't need it, so please say R.I.P to jQuery and stop using it!
+
+**Installation**  
+`npm install axios`  
+**or**
+`yarn add global axios`
 
 **Usage**
->Using GitHub api
+
+> Using GitHub api
+
 ```
 const axios = require('axios');
 //Importation
@@ -51,22 +54,43 @@ async getInformation(request,response) {
 
 	...
 }
+
 ```
 
-For more details, visit the official [axios documentation](https://github.com/axios/axios).
-### express
+For more details, visit the official  [axios documentation](https://github.com/axios/axios).
 
-There are a lot of functionalities in **express**, but the most used (and the one I will show here) is the routing one. 
-You can easily open a localhost server for testing your app using this module.
+### [](https://github.com/Gerjunior/useful-modules#express)express
+
+There are a lot of functionalities in  **express**, but the most used (and the one I will show here) is the routing one. You can easily open a localhost server for testing your app using this module.
 
 **Installation**
-`npm install express`
-**Or you can use Yarn**
-***Local*** : `yarn add express`
+  `npm install express`  
+  **or** 
+   `yarn add express`
+   
+**Usage**
 
-**Start a fresh project**
-You can use **express-generator** to start a new express project from an existing template.
-**install** using `npm install express-generator -g` or if you want to use Yarn `yarn add global express-generator`
+```
+const  express = require('express')
+
+const app = express();
+
+//GET route, which will show the message "Hello, World!".
+app.get('/', (req, res) => {
+	res.send('Hello, World!')
+	})
+
+//Starting the localhost server on port 3000. 
+//Use 'localhost:3000' to access.
+app.listen(3000, () => {
+	console.log('Listening on port 3000.')
+	})
+
+```
+
+***Using express-generator***
+**Start a fresh project**.  You can use  **express-generator**  to start a new express project from an existing template.  **Install**  using  `npm install express-generator -g`  or  `yarn add global express-generator`.
+
 ```
 Starting a new Project.
 
@@ -91,38 +115,23 @@ Creation: express --view=pug FreshStart
      cd FreshStart
      npm install or yarn add
      set DEBUG=myapp:* & npm start [Note: If you used yarn to install packages start with yarn start]
+
 ```
 
-**Usage**
-```
-const  express = require('express')
 
-const app = express();
+For more details, visit the official  [express documentation](https://expressjs.com/pt-br/starter/installing.html).
 
-//GET route, which will show the message "Hello, World!".
-app.get('/', (req, res) => {
-	res.send('Hello, World!')
-	})
-
-//Starting the localhost server on port 3000. 
-//Use 'localhost:3000' to access.
-app.listen(3000, () => {
-	console.log('Listening on port 3000.')
-	})
-```
-For more details, visit the official [express documentation](https://expressjs.com/pt-br/starter/installing.html).
-
-### node-restful
+### [](https://github.com/Gerjunior/useful-modules#node-restful)node-restful
 
 node-restful module is used for automatizing http routes. With it in your project, you can simply declare a list of methods you want to use in a determinated model and it will make some default routes for yah!
 
-**Instalation**
+**Instalation**  
 `npm install node-restful`
-**Or you can use Yarn**
-***Local*** : `yarn add express`
+  **or** 
+ `yarn add express`
 
-**Usage**
-On TODO model file 
+**Usage**  On TODO model file
+
 > Using mongoose
 
 ```
@@ -136,8 +145,11 @@ const todoSchema = new mongoose.Schema({
 })
 
 module.exports = restful.model('Todo', todoSchema)
+
 ```
+
 On todoService
+
 ```
 const Todo = require('./todo')
 
@@ -145,9 +157,13 @@ Todo.methods(['get', 'post', 'put', 'delete']);
 Todo.updateOptions({new: true, runValidators: true})
 
 module.exports = Todo
+
 ```
+
 On routes.js
+
 > Using express
+
 ```
 const express = require('express')
 
@@ -160,24 +176,26 @@ module.exports = (server) => {
     todoService.register(router, '/todos')
     
 }
-```
-For more details, visit the official [node-restful documentation](https://github.com/baugarten/node-restful).
 
-### Nest Js
+```
+
+For more details, visit the official  [node-restful documentation](https://github.com/baugarten/node-restful).
+
+### [](https://github.com/Gerjunior/useful-modules#nest-js)Nest Js
 
 NestJs is a progressive Node.js framework for building efficient and scalable server-side applications.
 
-**Instalation**
-`npm i -g @nestjs/cli`
-**Or you can use Yarn**
-***Local*** : `yarn add global @nestjs/cli`
+**Instalation *_(global)_*** 
+ `npm i -g @nestjs/cli` 
+ **or**
+  `yarn add global @nestjs/cli`
 
-**Usage**
-create the project
-> nest new FreshStart
-> cd FreshStart && npm run start
+**Usage**  create the project
+
+``nest new FreshStart cd FreshStart && npm run start``
 
 Main.ts
+
 ```
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
@@ -187,7 +205,30 @@ async function bootstrap() {
   await app.listen(3000);
 }
 bootstrap();
+
 ```
-For more details, visit the official [NestJs documentation](https://docs.nestjs.com/first-steps).
+
+For more details, visit the official  [NestJs documentation](https://docs.nestjs.com/first-steps).
 
 
+### [](https://github.com/Gerjunior/useful-modules#mongoose)mongoose
+
+Easy way to connect to a mongoDB server! 
+
+**Instalation**  
+`npm install mongoose`
+  **or** 
+ `yarn add mongoose`
+```
+const mongoose =  require('mongoose')
+
+module.exports  = mongoose.connect('mongodb+srv://<user>:<login>@<password>@cluster0-nfnvf.mongodb.net/<collectionName>?retryWrites=true&w=majority', {
+	useNewUrlParser:  true,
+	useUnifiedTopology:  true,
+	useFindAndModify:  true
+
+})
+
+```
+
+>Ps: MongoDB Atlas is a global cloud database service that you can use to host your data. You have one free server to begin with.
