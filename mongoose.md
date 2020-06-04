@@ -1,12 +1,17 @@
-### [](https://github.com/Gerjunior/useful-modules#mongoose)mongoose
+# mongoose
 
-Easy way to connect to a mongoDB server! 
+Official MongoDB driver! 
 
-**Instalation**  
-`npm install mongoose`
-  **or** 
- `yarn add mongoose`
-```
+## Installation 
+**npm**
+
+```npm install mongoose```
+
+**yarn**
+
+```yarn add mongoose```
+
+```js
 const mongoose =  require('mongoose')
 
 module.exports  = mongoose.connect('mongodb+srv://<user>:<login>@<password>@cluster0-nfnvf.mongodb.net/<collectionName>?retryWrites=true&w=majority', {
@@ -19,3 +24,4 @@ module.exports  = mongoose.connect('mongodb+srv://<user>:<login>@<password>@clus
 ```
 
 >Ps: MongoDB Atlas is a global cloud database service that you can use to host your data. You have one free server to begin with.
+

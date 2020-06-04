@@ -1,13 +1,19 @@
-### [](https://github.com/Gerjunior/useful-modules#node-restful)node-restful
+### # node-restful
 
 node-restful module is used for automatizing http routes. With it in your project, you can simply declare a list of methods you want to use in a determinated model and it will make some default routes for yah!
 
-**Instalation**  
-`npm install node-restful`
-  **or** 
- `yarn add express`
+## Installation
 
-**Usage**  On TODO model file
+**npm**
+
+```npm install node-restful```
+
+**yarn** 
+```yarn add express```
+
+### Usage
+
+On TODO model file
 
 > Using mongoose
 

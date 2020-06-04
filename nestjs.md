@@ -1,17 +1,9 @@
-### [](https://github.com/Gerjunior/useful-modules#nest-js)Nest Js
+# nest js
 
 NestJs is a progressive Node.js framework for building efficient and scalable server-side applications.
 
-**Instalation *_(global)_*** 
- `npm i -g @nestjs/cli` 
- **or**
-  `yarn add global @nestjs/cli`
-
-**Usage**  create the project
-
-``nest new FreshStart cd FreshStart && npm run start``
-
-Main.ts
+## Installation
+```npx -p @nestjs/cli nest new [project]```
 
 ```
 import { NestFactory } from '@nestjs/core';
